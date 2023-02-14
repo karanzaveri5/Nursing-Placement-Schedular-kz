@@ -11,32 +11,32 @@ export const DrawerWidth = 300;
 export const Menus = [
     {
         id: "students",
-        name: "Students",
+        name: "Hospital Agencies",
         Icon: PeopleAltIcon
     },
     {
         id: "hospitals",
-        name: "Hospitals",
+        name: "Community Agencies",
         Icon: LocalHospitalIcon
     },
     {
         id: "schools",
-        name: "Schools",
+        name: "Preferred Locations",
         Icon: SchoolIcon
     },
     {
         id: "instructors",
-        name: "Instructors",
+        name: "Hospital Registrations",
         Icon: PersonIcon
     },
     {
         id: "placement-locations",
-        name: "Placement Locations",
+        name: "Community Reggistration",
         Icon: LocationOnIcon
     },
     {
         id: "placements",
-        name: "Placements",
+        name: "Form Settings",
         Icon: PersonPinIcon
     }
 ];
