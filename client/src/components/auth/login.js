@@ -69,7 +69,7 @@ export default function Login() {
                 throw new Error();
             }
 
-            const res = await axios.post("/user/studentlogin", { username, password });
+            const res = await axios.post("/user/agencysignup", { username, password });
             const { token, user } = res.data;
             setUserData({ token, user, fetched: true });
             setAuthTokenToLocalStorage(token);

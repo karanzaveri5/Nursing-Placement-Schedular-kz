@@ -3,7 +3,6 @@ import {
     Navigate, Outlet, Route, Routes, useLocation
 } from "react-router-dom";
 import Login from "./components/auth/login";
-import StudentLogin from "./components/auth/studentlogin";
 import Hospitals from "./components/hospitals";
 import AddEditHospital from "./components/hospitals/add-edit-hospital";
 import Schools from "./components/schools";
@@ -39,7 +38,8 @@ export default function AppRoutes() {
     return (
         <Routes>
             <Route path="/login" element={userData.user ? <Navigate to="/students" replace /> : <Login />} />
-            <Route path="/studentlogin" element={<StudentLogin />} />
+
+            <Route path="/studentlogin" element={userData.user ? <Navigate to="/agencysignup" replace /> : <Login />} />
 
             <Route element={<RequireAuth />}>
                 <Route path="/students" element={<Outlet />}>
