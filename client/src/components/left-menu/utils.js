@@ -31,7 +31,7 @@ export const Menus = [
     },
     {
         id: "placement-locations",
-        name: "Community Reggistration",
+        name: "Community Registration",
         Icon: LocationOnIcon
     },
     {

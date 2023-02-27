@@ -1,7 +1,7 @@
 import React, {
     useContext, useRef, useCallback, useEffect
 } from "react";
-import { useNavigate } from "react-router-dom";
+import { redirect, useNavigate } from "react-router-dom";
 import Typography from "@mui/material/Typography";
 import Paper from "@mui/material/Paper";
 import InputAdornment from "@mui/material/InputAdornment";
@@ -57,26 +57,30 @@ export default function Login() {
         }
     };
 
+    // const handleStudentSubmit = async () => {
+    //     try {
+    //         const username = usernameRef.current.value();
+    //         const password = passwordRef.current.value();
+
+    //         const isUsernameValid = ValidateUtils.validateUsername(username, usernameRef.current);
+    //         const isPasswordValid = ValidateUtils.validatePassword(password, passwordRef.current);
+
+    //         if (!isUsernameValid || !isPasswordValid) {
+    //             throw new Error();
+    //         }
+
+    //         const res = await axios.post("/user/agencysignup", { username, password });
+    //         const { token, user } = res.data;
+    //         setUserData({ token, user, fetched: true });
+    //         setAuthTokenToLocalStorage(token);
+    //         ShowSnackbarAlert({ message: "Logged in successfully" });
+    //     } catch (err) {
+    //         ShowSnackbarAlert({ message: err.response.data.message, severity: "error" });
+    //     }
+    // };
+
     const handleStudentSubmit = async () => {
-        try {
-            const username = usernameRef.current.value();
-            const password = passwordRef.current.value();
-
-            const isUsernameValid = ValidateUtils.validateUsername(username, usernameRef.current);
-            const isPasswordValid = ValidateUtils.validatePassword(password, passwordRef.current);
-
-            if (!isUsernameValid || !isPasswordValid) {
-                throw new Error();
-            }
-
-            const res = await axios.post("/user/login", { username, password });
-            const { token, user } = res.data;
-            setUserData({ token, user, fetched: true });
-            setAuthTokenToLocalStorage(token);
-            ShowSnackbarAlert({ message: "Logged in successfully" });
-        } catch (err) {
-            ShowSnackbarAlert({ message: err.response.data.message, severity: "error" });
-        }
+        window.location.replace("/agencysignup");
     };
 
     const handleKeyDown = useCallback((event) => {
