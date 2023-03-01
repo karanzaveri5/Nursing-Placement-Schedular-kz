@@ -17,7 +17,7 @@ import Placements from "./components/placements";
 import NewPlacement from "./components/placements/new-placement";
 import ViewPlacement from "./components/placements/view-placement";
 import { UserContext } from "./services";
-import AgencySignup from "./components/agencysignup";
+import StudentDashboard from "./components/student-dashboard";
 
 function RequireAuth() {
     const { userData } = useContext(UserContext);
@@ -40,7 +40,8 @@ export default function AppRoutes() {
         <Routes>
             <Route path="/login" element={userData.user ? <Navigate to="/students" replace /> : <Login />} />
 
-            <Route path="/agencysignup" element={<AgencySignup />} />
+            <Route path="/studentdashboard" element={<StudentDashboard />} />
+            {/* <Route path="" element={<StudentDashboard />} /> */}
 
             <Route element={<RequireAuth />}>
                 <Route path="/students" element={<Outlet />}>

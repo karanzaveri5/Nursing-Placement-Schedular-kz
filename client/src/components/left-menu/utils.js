@@ -38,5 +38,10 @@ export const Menus = [
         id: "placements",
         name: "Form Settings",
         Icon: PersonPinIcon
+    },
+    {
+        id: "student-links",
+        name: "Student Links",
+        Icon: PersonPinIcon
     }
 ];

@@ -37,6 +37,7 @@ export default function Login() {
 
     const handleSubmit = async () => {
         try {
+            // debugger;
             const username = usernameRef.current.value();
             const password = passwordRef.current.value();
 
@@ -69,7 +70,7 @@ export default function Login() {
     //             throw new Error();
     //         }
 
-    //         const res = await axios.post("/user/agencysignup", { username, password });
+    //         const res = await axios.post("/user/StudentDashboard", { username, password });
     //         const { token, user } = res.data;
     //         setUserData({ token, user, fetched: true });
     //         setAuthTokenToLocalStorage(token);
@@ -80,7 +81,7 @@ export default function Login() {
     // };
 
     const handleStudentSubmit = async () => {
-        window.location.replace("/agencysignup");
+        window.location.replace("/studentdashboard");
     };
 
     const handleKeyDown = useCallback((event) => {
