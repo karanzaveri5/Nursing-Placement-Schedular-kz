@@ -10,7 +10,7 @@ export const DrawerWidth = 300;
 
 export const Menus = [
     {
-        id: "hospital-list",
+        id: "hospital_list",
         name: "List of available agencies - Hospital",
         Icon: PeopleAltIcon
     },
@@ -20,17 +20,17 @@ export const Menus = [
         Icon: LocalHospitalIcon
     },
     {
-        id: "location-form",
+        id: "location_form",
         name: "Preferred Location Form",
         Icon: SchoolIcon
     },
     {
-        id: "hospital-registration",
+        id: "hospital_registration",
         name: "Hospital Registration Form",
         Icon: PersonIcon
     },
     {
-        id: "cc-registration",
+        id: "cc_registration",
         name: "Community Registration Form",
         Icon: LocationOnIcon
     }

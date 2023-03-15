@@ -9,7 +9,7 @@ import Box from "@mui/system/Box";
 import { useLocation, useNavigate } from "react-router-dom";
 import { DrawerWidth, Menus } from "./utils";
 import { UserContext } from "../../services";
-import LeftMenuHeader from "../left-menu/header";
+import LeftMenuHeader from "./header";
 
 export default function StudentDashboard() {
     const location = useLocation();
