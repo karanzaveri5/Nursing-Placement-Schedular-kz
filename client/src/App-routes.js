@@ -18,6 +18,11 @@ import NewPlacement from "./components/placements/new-placement";
 import ViewPlacement from "./components/placements/view-placement";
 import { UserContext } from "./services";
 import StudentDashboard from "./components/student-dashboard";
+import CCList from "./components/student-dashboard/cclist";
+import HospitalList from "./components/student-dashboard/HospitalList";
+import LocationForm from "./components/student-dashboard/location_form";
+import HospitalRegistrationForm from "./components/student-dashboard/hospital_registration";
+import CCRegistrationForm from "./components/student-dashboard/cc_registration";
 
 function RequireAuth() {
     const { userData } = useContext(UserContext);
@@ -41,7 +46,21 @@ export default function AppRoutes() {
             <Route path="/login" element={userData.user ? <Navigate to="/students" replace /> : <Login />} />
 
             <Route path="/studentdashboard" element={<StudentDashboard />} />
-            {/* <Route path="" element={<StudentDashboard />} /> */}
+            <Route path="/hospital_list">
+                <Route path="" element={<HospitalList />} />
+            </Route>
+            <Route path="/cclist">
+                <Route path="" element={<CCList />} />
+            </Route>
+            <Route path="/location_form" element={<Outlet />}>
+                <Route path="" element={<LocationForm />} />
+            </Route>
+            <Route path="/hospital_registration" element={<Outlet />}>
+                <Route path="" element={<HospitalRegistrationForm />} />
+            </Route>
+            <Route path="/cc_registration" element={<Outlet />}>
+                <Route path="" element={<CCRegistrationForm />} />
+            </Route>
 
             <Route element={<RequireAuth />}>
                 <Route path="/students" element={<Outlet />}>
